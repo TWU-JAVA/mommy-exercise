@@ -5,38 +5,40 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class MommifyTest {
+
+
+    private String getMommifiedString(String s) {
+        Mommify mommify = new Mommify();
+        return mommify.mommifyString(s);
+    }
+
     @Test
     public void shouldNotMommifyEmptyString() {
-        Mommify mommify = new Mommify();
-        String mommified = mommify.mommifyString("");
+        String mommified = getMommifiedString("");
         assertEquals("", mommified);
     }
 
     @Test
     public void shouldNotMommifySingleConsonant() {
-        Mommify mommify = new Mommify();
-        String mommified = mommify.mommifyString("b");
+        String mommified = getMommifiedString("b");
         assertEquals("b", mommified);
     }
 
     @Test
     public void shouldMommifySingleVowel() {
-        Mommify mommify = new Mommify();
-        String mommified = mommify.mommifyString("a");
+        String mommified = getMommifiedString("a");
         assertEquals("mommy", mommified);
     }
 
     @Test
     public void shouldMommifySingleVowelConsonant() {
-        Mommify mommify = new Mommify();
-        String mommified = mommify.mommifyString("ab");
+        String mommified = getMommifiedString("ab");
         assertEquals("mommyb", mommified);
     }
 
     @Test
     public void shouldMommifyAllVowelString() {
-        Mommify mommify = new Mommify();
-        String mommified = mommify.mommifyString("ae");
+        String mommified = getMommifiedString("ae");
         assertEquals("mommy", mommified);
     }
 }
