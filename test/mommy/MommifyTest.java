@@ -41,4 +41,10 @@ public class MommifyTest {
         String mommified = getMommifiedString("ae");
         assertEquals("mommy", mommified);
     }
+
+    @Test
+    public void shouldMommifyStringWithUpTo30PercentContinuousVowels(){
+        String mommified = getMommifiedString("hear");
+        assertEquals("hmommyr",mommified);
+    }
 }

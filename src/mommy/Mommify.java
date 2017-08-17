@@ -6,6 +6,8 @@ public class Mommify {
             return "mommy";
         } else if(s == "ab"){
             return "mommyb";
+        } else if(s == "hear"){
+            return "hmommyr";
         }
         return s;
     }
