@@ -47,4 +47,7 @@ public class MommifyTest {
         String mommified = getMommifiedString("hear");
         assertEquals("hmommyr",mommified);
     }
+
+    //@Test
+    //public void shouldNotMommifyStringWith30Percent
 }
