@@ -12,4 +12,10 @@ public class MommifyTest {
         assertEquals("",mommified);
     }
 
+    @Test
+    public void shouldNotMommifySingleConsonant(){
+        Mommify mommify = new Mommify();
+        String mommified = mommify.mommifyString("b");
+        assertEquals("b",mommified);
+    }
 }
